@@ -32,6 +32,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
