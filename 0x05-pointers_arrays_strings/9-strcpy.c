@@ -1,22 +1,40 @@
 #include "main.h"
 
 /**
- * _strcpy - a function that takes a pointer to an int as parameter and
- * @dest: chaine of caractere
- * @src: cahine caractere
- *
- * Return: dest
+ * string_length - finds the length of a string.
+ * Return: length of c.
+ * @pointer: pointer.
  */
+int string_length(char *pointer)
+{
+	int c = 0;
 
+	while (*(pointer + c) != '\0')
+	{
+		c++;
+	}
+	return (c);
+}
+/**
+ * *_strcpy - copies the string pointed to by src.
+ *
+ * @dest: pointer to the buffer.
+ * @src: pointer to the source string.
+ * Return: char
+ */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int n;
+	int i;
 
-	while (src[i] != '\0')
+	n = string_length(src);
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
-		i++;
 	}
-	dest[i] = '\0';
+	for (; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
 	return (dest);
 }
