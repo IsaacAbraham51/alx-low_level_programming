@@ -3,13 +3,14 @@
 
 #include <stdio.h>
 
-void free_grid(int **grid, int height);
+void _puts(char *str);
 void *malloc_checked(unsigned int b);
-char *_strdup(char *str);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
+void *_calloc(unsigned int nmemb, unsigned int size);
+int *array_range(int min, int max);
+void -_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _putchar(char c);
-char *create_array(unsigned int size, char c);
-int **aloc_grid(int width, int height);
-char *argstostr(int ac, char **av);
+int _atoi(const char *s);
+void print_int(unsigned long int n);
 
 #endif /* MAIN_H */
